@@ -1,40 +1,22 @@
-import { CSSProperties, FC } from 'react'
+import { FC } from 'react'
 import { useDrop } from 'react-dnd'
 
-const style: CSSProperties = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
-  color: 'white',
-  padding: '1rem',
-  textAlign: 'center',
-  fontSize: '1rem',
-  lineHeight: 'normal',
-  float: 'left',
-}
-
 export const Dustbin: FC = () => {
-  const [{ canDrop, isOver }, drop] = useDrop(() => ({
-    accept: 'box',
+  const [{ canDrop, isOver}, drop] = useDrop(() => ({
+    accept: 'grid',
     drop: () => ({ name: 'Dustbin' }),
     collect: (monitor) => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
+      bune: monitor.getDropResult(),
     }),
   }))
 
-  const isActive = canDrop && isOver
-  let backgroundColor = '#222'
-  if (isActive) {
-    backgroundColor = 'darkgreen'
-  } else if (canDrop) {
-    backgroundColor = 'darkkhaki'
-  }
+  const isActive = isOver && canDrop
 
   return (
-    <div ref={drop} role={'Dustbin'} style={{ ...style, backgroundColor }}>
-      {isActive ? 'Release to drop' : 'Drag a box here'}
+    <div ref={drop} className="dustbin">
+      {isActive ? 'Bırak' : 'Grid yükleyerek başlayabilirsiniz'}
     </div>
   )
 }

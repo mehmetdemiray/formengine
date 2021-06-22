@@ -36,3 +36,11 @@ html, body {
 section {
   padding: 32px;
 }
+
+.dustbin-outer {
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

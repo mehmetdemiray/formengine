@@ -14,13 +14,13 @@ export const SidebarLeft = () => {
 			</Link>
 			<div className="sidebar-left_inline">
 			<DndProvider backend={HTML5Backend}>
-				<SideBlock title="Grid" />
-				<SideBlock title="Form" />
-				<SideBlock title="Input" />
-				<SideBlock title="Textarea" />
-				<SideBlock title="Select" />
-				<SideBlock title="Button" />
-				<SideBlock title="Radio" />
+				<SideBlock type="grid" title="Grid" />
+				<SideBlock type="form" title="Form" />
+				<SideBlock type="form-item" title="Input" />
+				<SideBlock type="form-item" title="Textarea" />
+				<SideBlock type="form-item" title="Select" />
+				<SideBlock type="form-item" title="Button" />
+				<SideBlock type="form-item" title="Radio" />
 			</DndProvider>
 			</div>
 		</div>

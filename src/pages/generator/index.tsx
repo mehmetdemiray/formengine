@@ -1,9 +1,10 @@
-import { FC, memo } from 'react'
+import { FC, memo } from 'react';
+import { useSelector } from 'react-redux';
 import { Layout } from '../../layout';
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { Dustbin } from './dustbin'
-import { Box } from './box'
+import { FormState } from '../../redux/formReducer';
 
 export const GeneratorPage = () => {
 	return (
@@ -16,11 +17,13 @@ export const GeneratorPage = () => {
 };
 
 const Container: FC = memo(function Container() {
+	const FormData = useSelector<FormState, FormState["form"]>((state) => state.form)
   return (
-    <div>
-      <div style={{ overflow: 'hidden', clear: 'both' }}>
-        <Dustbin />
-      </div>
+    <div className="dustbin-outer">
+			{FormData.map((form) => 
+				form.Name + "/"
+			)}
+      <Dustbin />
     </div>
   )
 })
