@@ -1,0 +1,38 @@
+html, body {
+  background: #ffffff;
+  font-family: $primary-font;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+#page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.container {
+  &-fluid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.content-in {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 32px;
+}

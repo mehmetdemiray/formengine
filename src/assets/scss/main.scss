@@ -1,17 +1,21 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+@import 'abstracts/animations';
 
 @import 'vendors/vendors';
 
+@import 'base/reset';
 @import 'base/normalize';
 @import 'base/typography';
 
+@import 'layout/content';
 @import 'layout/navigation';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
 
+@import 'components/sideblocks';
 @import 'components/input';
 
 @import 'pages/home';

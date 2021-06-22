@@ -1,0 +1,39 @@
+.sidebar-left {
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid #efefef;
+  background: #fcfcfc;
+  .logo {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #efefef;
+    ._abs {
+      position: absolute;
+      left: 68px;
+      top: 20px;
+      @include rotating(4s);
+    }
+    &:hover {
+      background: darken(#fcfcfc, 1%);
+      ._abs {
+        @include rotating(1s);
+      }
+    }
+  }
+  &_inline {
+    padding: 16px;
+  }
+  .side-block {
+    margin-bottom: 16px;
+  }
+}
+
+.sidebar-right {
+  width: 300px;
+  height: 100%;
+  border-left: 1px solid #efefef;
+  background: #fcfcfc
+}

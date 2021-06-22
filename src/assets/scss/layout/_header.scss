@@ -1,0 +1,16 @@
+header {
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #efefef;
+  height: 50px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  > a {
+    margin-left: 16px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
